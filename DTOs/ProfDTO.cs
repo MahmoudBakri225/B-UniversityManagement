@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace B_UniversityManagement.DTOs
 {
-    public class StudentDTO
+    public class ProfDTO
     {
         [Key]
         public int Id { get; set; }
@@ -17,7 +17,9 @@ namespace B_UniversityManagement.DTOs
         [Unicode(false)]
         public string? Lname { get; set; }
 
-        public bool Gender { get; set; }
+        [StringLength(10)]
+        [Unicode(false)]
+        public string? Gender { get; set; }
 
         [StringLength(255)]
         [Unicode(false)]
@@ -31,13 +33,15 @@ namespace B_UniversityManagement.DTOs
         [Unicode(false)]
         public string? Address { get; set; }
 
+        [StringLength(20)]
+        [Unicode(false)]
+        public string? OfficeNumber { get; set; }
+
         [StringLength(255)]
         [Unicode(false)]
         public string? Password { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? DateOfBirth { get; set; }
-
-        public int? LevelYear { get; set; }
     }
 }

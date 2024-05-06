@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace B_UniversityManagement.DTOs
 {
-    public class FacultyDTO
+    public class BookDTO
     {
         [Key]
         public int Id { get; set; }
@@ -14,7 +14,8 @@ namespace B_UniversityManagement.DTOs
 
         [StringLength(255)]
         [Unicode(false)]
-        public string? Description { get; set; }
+        public string? Author { get; set; }
+
+        public int? PublicationYear { get; set; }
     }
 }
-

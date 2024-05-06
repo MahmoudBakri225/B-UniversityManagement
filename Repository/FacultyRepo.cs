@@ -1,6 +1,7 @@
 ﻿using B_UniversityManagement.Data;
 using B_UniversityManagement.IRepository;
 using B_UniversityManagement.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace B_UniversityManagement.Repository
 {
@@ -20,19 +21,20 @@ namespace B_UniversityManagement.Repository
 
         public void Delete(Faculty faculty)
         {
-            throw new NotImplementedException();
+            context.Remove(faculty);
+            context.SaveChanges();
         }
-
         public List<Faculty> GetAll() => context.Faculties.ToList();
 
         public Faculty GetById(int id)
         {
-            throw new NotImplementedException();
+            return context.Faculties.Find(id);
         }
 
-        public void Update(Faculty college)
+        public void Update(Faculty faculty)
         {
-            throw new NotImplementedException();
+            context.Update(faculty);
+            context.SaveChanges();
         }
     }
 }

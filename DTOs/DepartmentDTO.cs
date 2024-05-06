@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace B_UniversityManagement.DTOs
 {
-    public class FacultyDTO
+    public class DepartmentDTO
     {
         [Key]
         public int Id { get; set; }
@@ -17,4 +17,3 @@ namespace B_UniversityManagement.DTOs
         public string? Description { get; set; }
     }
 }
-
